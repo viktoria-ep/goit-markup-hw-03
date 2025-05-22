@@ -4,15 +4,61 @@ body {
   background-color: #ffffff;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02em;
 }
 
 a {
   text-decoration: none;
 }
 
+.img {
+  display: block;
+}
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h3 {
+  padding-bottom: 8px;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .logo {
@@ -23,6 +69,8 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding: 24px 0;
+  margin-right: 76px;
 }
 
 .header-logo-accent {
@@ -35,6 +83,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+  display: block;
 }
 
 .header-nav:hover,
@@ -44,6 +94,13 @@ ul {
 
 .address {
   font-style: normal;
+  margin-left: auto;
+}
+
+.address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .address-item {
@@ -52,6 +109,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  display: block;
+  padding: 24px 0;
 }
 
 .address-item:hover,
@@ -59,8 +118,9 @@ ul {
   color: #404bbf;
 }
 
-.hero {
+.section-hero {
   background-color: #2e2f42;
+  padding: 188px 0;
 }
 
 .hero-title {
@@ -70,6 +130,9 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
+  padding-bottom: 48px;
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .hero-button {
@@ -81,11 +144,54 @@ ul {
   letter-spacing: 0.04em;
   color: #ffffff;
   cursor: pointer;
+  display: block;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+.section-advantages {
+  padding: 120px 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages-list {
+  display: flex;
+  gap: 24px;
+}
+
+.advantages-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.section-heading.advantages {
+  padding-top: 0;
+}
+
+.section-text.advantages {
+  padding-bottom: 0;
+}
+
+.content-team {
+  padding: 32px 16px;
 }
 
 .section-title {
@@ -96,30 +202,25 @@ ul {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 
-.section-heading {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.section-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
-.team {
+.section-team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-item {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  width: calc((100% - 72px) / 4);
+}
+
+.our-team {
+  display: flex;
+  gap: 24px;
 }
 
 .team-subtitle {
@@ -140,8 +241,50 @@ ul {
   color: #434455;
 }
 
+.section-heading {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.section-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.section-portfolio {
+  padding: 120px 0;
+}
+
+.portfolio-item {
+  padding-bottom: 32px;
+  padding-top: 32px;
+  padding-left: 16px;
+}
+
+.portfolio-list {
+  width: calc((100% - 48px) / 3);
+}
+
+.our-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
+}
+
+.fotter-cnt {
+  display: inline-block;
+  max-width: 264px;
 }
 
 .footer-logo-accent {
@@ -154,4 +297,5 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  padding-top: 16px;
 }
