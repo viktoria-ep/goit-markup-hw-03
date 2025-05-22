@@ -17,6 +17,10 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 h1,
 h2,
 h3,
