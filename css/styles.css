@@ -129,9 +129,8 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 48px;
   max-width: 496px;
-  margin: 0 auto;
+  margin: 0 auto 48px;
 }
 
 .hero-button {
